@@ -5098,26 +5098,27 @@
 +]
 --- a/xpcom/ds/StaticAtoms.py
 +++ b/xpcom/ds/StaticAtoms.py
-@@ -12,6 +12,8 @@
+@@ -12,6 +12,7 @@
      NonInheritingAnonBoxAtom,
      PseudoElementAtom,
  )
 +from NativeMenuAtoms import NATIVE_MENU_ATOMS
-+
  from HTMLAtoms import HTML_PARSER_ATOMS
- 
+
  # Static atom definitions, used to generate nsGkAtomList.h.
-@@ -2561,7 +2563,7 @@
+@@ -2561,7 +2562,7 @@
      InheritingAnonBoxAtom("AnonBox_mozSVGForeignContent", ":-moz-svg-foreign-content"),
      InheritingAnonBoxAtom("AnonBox_mozSVGText", ":-moz-svg-text"),
      # END ATOMS
 -] + HTML_PARSER_ATOMS
 +] + HTML_PARSER_ATOMS + NATIVE_MENU_ATOMS
- # fmt: on 
- 
+ # fmt: on
+
+
 --- a/widget/gtk/components.conf
 +++ b/widget/gtk/components.conf
 @@ -76,6 +76,14 @@ Classes = [
+
          'headers': ['/widget/gtk/nsUserIdleServiceGTK.h'],
          'constructor': 'nsUserIdleServiceGTK::GetInstance',
      },
