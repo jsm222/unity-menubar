@@ -3254,7 +3254,7 @@
 +                          nullptr, 0, loadGroup, this, nullptr, nullptr,
 +                          nsIRequest::LOAD_NORMAL, nullptr,
 +                          nsIContentPolicy::TYPE_IMAGE, EmptyString(),
-+                          false, false, getter_AddRefs(mImageRequest));
++                          false, false, 0, getter_AddRefs(mImageRequest));
 +    }
 +}
 +
